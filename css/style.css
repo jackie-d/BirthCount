@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+/*  */
+
+* {
+	--primary-color: #FF55CC;
+	--secondary-color: #B860FF;
+	--complementary-color: rgba(210, 255, 85, 0.4);
+}
+
+/* Fonts */
+
+.anton, * {
+	font-family: "Anton", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+  }
+
+/* layout */
+
+.navbar {
+	background: var(--primary-color);
+	color: white;
+}
+
+.navbar .navbar-brand {
+	color: white;
+}
+
+.navbar .dropdown-toggle::after {
+	color: white;
+}
+
+/* elements */
+
+.btn{
+    border-radius: 0px!important;
+    -webkit-border-radius: 0px!important;
+    -moz-border-radius: 0px!important;
+}
+
+.dropdown-menu {
+	border-radius: 0px!important;
+    -webkit-border-radius: 0px!important;
+    -moz-border-radius: 0px!important;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: var(--primary-color) !important;
+	border-color: var(--primary-color);
+}
+
+.btn-secondary, .btn-secondary:hover, .btn-secondary:active, .btn-secondary:visited {
+    background-color: var(--secondary-color) !important;
+	border-color: var(--secondary-color);
+}
+
+/* dashboard */
+
+#bday-list {
+	background: var(--complementary-color);
+	padding: 24px;
+	margin: 16px;
+}
+
+#bday-list ul, #bday-list p {
+	margin: 0;
+}
+
+#bday-list .add-bday {
+	margin: 16px 0;
+	font-size: larger;
+}
+
+#bday-list ul {
+
+}
+
+#bday-list li {
+	font-size: larger;
+}
