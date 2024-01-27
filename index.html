@@ -15,7 +15,7 @@
 <body id="dashboard">
 
 
-  <nav class="navbar navbar-expand-md mb-4">
+  <nav class="navbar navbar-expand-md mb-2">
     <div class="container-fluid">
       <a class="navbar-brand" href="./">BirthCount.com</a>
 
@@ -30,12 +30,12 @@
             <!-- https://eu.ui-avatars.com/api/?name=John+Doe&size=25 -->
           </a>
           <ul class="dropdown-menu text-small dropdown-menu-end" aria-labelledby="dropdownUser1" style="">
-            <li><a class="dropdown-item" href="./">Dashboard</a></li>
+            <li><a class="dropdown-item" href="./">List of Birthdays</a></li><li><a class="dropdown-item" href="./add-birthdate.html">Note a Birthdate</a></li>
+            <li><a class="dropdown-item disabled" href="./">Bday Wishes</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="./invite.html">Invite to join the list</a></li>
+            <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="./profile.html">My profile page</a></li>
-            <li><a class="dropdown-item disabled" href="./">Wishes</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="./invite.html">Invite a person in</a></li>
-            <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item signout-button" href="#">Sign out</a></li>
           </ul>
       </div>
@@ -51,23 +51,34 @@
 
       <div class="col-md-9" id="">
 
-        <div id="bday-list">
+        <div id="bday-list" class="bday-list">
           
-          <ul></ul>
+          <p class="mb-3">You saved these birthdays:</p>
+
+          <ul>
+            <li class="sample mt-2" style="margin-left: 40px"><a href="./add-birthdate.html">Insert a new one</a>: <em>Who</em> @ <em>Birthdate</em></li>
+          </ul>
+
+        </div>
+        <div class="bday-list">
           
-          <p><strong>Write now your birthday's notes!</strong><br />Add some people birthdays to show them here for you and who joins you from them.</p>
-        
+          <p><strong>Write now your birthday's notes!</strong><br />Add some people birthdays to show them here for you and who joins you from them.<br />Anyone else?</p>
+
           <a class="btn btn-primary add-bday" href="./add-birthdate.html">Write a new birthday date</a>
 
         </div>
 
-
-        <div id="people-count-container">
-          On this family there are: <span></span> people
-        </div>
-
       </div>
       <div class="col-md-3" id="">
+
+        <div id="people-count-container">
+          <p><strong>People who can see this list with you:</strong></p>
+          <p>Only you can see this list.</p>
+          <ul></ul>
+
+          <a class="btn btn-secondary invite" href="./invite.html">Invite and share this list</a>
+
+        </div>
 
       </div>      
 

@@ -15,7 +15,7 @@
 <body id="add-birthdate">
 
 
-  <nav class="navbar navbar-expand-md mb-4">
+  <nav class="navbar navbar-expand-md mb-2">
     <div class="container-fluid">
       <a class="navbar-brand" href="./">BirthCount.com</a>
 
@@ -30,12 +30,12 @@
             <!-- https://eu.ui-avatars.com/api/?name=John+Doe&size=25 -->
           </a>
           <ul class="dropdown-menu text-small dropdown-menu-end" aria-labelledby="dropdownUser1" style="">
-            <li><a class="dropdown-item" href="./">Dashboard</a></li>
+            <li><a class="dropdown-item" href="./">List of Birthdays</a></li><li><a class="dropdown-item" href="./add-birthdate.html">Note a Birthdate</a></li>
+            <li><a class="dropdown-item disabled" href="./">Bday Wishes</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="./invite.html">Invite to join the list</a></li>
+            <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="./profile.html">My profile page</a></li>
-            <li><a class="dropdown-item disabled" href="./">Wishes</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="./invite.html">Invite a person in</a></li>
-            <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item signout-button" href="#">Sign out</a></li>
           </ul>
       </div>
@@ -47,31 +47,33 @@
 
     <div class="container-fluid">
 
-    <div class="row justify-content-center">
+    <div class="">
 
-      <div class="col-12 text-center" id="">
+      <div class="row container-box justify-content-center">
 
-          <h3>Add a new Birthday Date:</h3>
+          <div class="col">
 
-        </div>
-        <div class="col-md-6 text-center">
+            <h3>Add a BirthDate to your list</h3>
+            <p>You can add a Birthday note to your list you are privately sharing with the others of your group as now.<br /> You can just write the name and the birthdate to have it added to your list.</p>
 
-          <form onsubmit="return false;">
-            <div class="mb-3">
-              <label for="nameInput" class="form-label">Name</label>
-              <input type="text" class="form-control" id="name-input" aria-describedby="nameHelp">
-              <div id="nameHelp" class="form-text">Birthday Person name</div>
-            </div>
-            <div class="mb-3">
-              <label for="dateInput" class="form-label">Date</label>
-              <input type="text" class="form-control" id="date-input">
-            </div>
-            <button type="submit" class="btn btn-primary" id="add-button">Add</button>
-          </form>
+            <form onsubmit="return false;">
+              <div class="mb-3">
+                <label for="nameInput" class="form-label">Person Name</label>
+                <input type="text" class="form-control" id="name-input" aria-describedby="nameHelp" placeholder="Name">
+                <div id="nameHelp" class="form-text">The name of the person of the birthday as it will appear on the list</div>
+              </div>
+              <div class="mb-3">
+                <label for="dateInput" class="form-label">Birthdate</label>
+                <input type="text" class="form-control" id="date-input" placeholder="10-09-1990">
+              </div>
+              <button type="submit" class="btn btn-primary" id="add-button">Add now to your list</button>
+            </form>
 
-        </div>
+          </div>
 
-      </div>    
+        </div>   
+      
+      </div>
 
     </div>
 

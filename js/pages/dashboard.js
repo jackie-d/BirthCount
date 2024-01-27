@@ -6,20 +6,22 @@ const module = {
 	firebase: null,
     user: null,
 	
-	init: function(firebase, user) {
+	init: async function(firebase, user) {
 		console.log(firebase);
 
 		this.firebase = firebase;
         this.user = user;
 
         if ( !user ) {
-            location.href = './home';
+            location.href = './home.html';
             return;
         }
 
 		const that = this;
 
-        this.loadData();
+        await this.loadData();
+        
+        this.initFx();
 
 	},
 
@@ -30,11 +32,23 @@ const module = {
 
         querySnapshot.forEach((doc) => {
           console.log(doc.id, " => ", doc.data());
-          $('<li>').text(doc.data().date + ' - ' + doc.data().name).appendTo('#bday-list ul');
+          const $item = $('<li>');
+          $('<span>').addClass('fa fa-cake px-2').appendTo($item);
+          $('<span>').text(doc.data().name + ' @ ' + doc.data().date).appendTo($item);
+          $('#bday-list ul li:last-child').before($item);
         });
 
         const snapshot = await getCountFromServer(coll);
         $('#people-count-container span').text(snapshot.data().count);
+    },
+
+    initFx: function() {
+        $('#bday-list ul li:not(.sample)').on('mouseover', function() {
+            $(this).addClass('highlight');
+        });
+        $('#bday-list ul li').on('mouseout', function() {
+            $(this).removeClass('highlight');
+        });
     }
 
 };

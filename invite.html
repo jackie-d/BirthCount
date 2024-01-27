@@ -15,7 +15,7 @@
 <body id="invite">
 
 
-  <nav class="navbar navbar-expand-md mb-4">
+  <nav class="navbar navbar-expand-md mb-2">
     <div class="container-fluid">
       <a class="navbar-brand" href="./">BirthCount.com</a>
 
@@ -30,12 +30,12 @@
             <!-- https://eu.ui-avatars.com/api/?name=John+Doe&size=25 -->
           </a>
           <ul class="dropdown-menu text-small dropdown-menu-end" aria-labelledby="dropdownUser1" style="">
-            <li><a class="dropdown-item" href="./">Dashboard</a></li>
+            <li><a class="dropdown-item" href="./">List of Birthdays</a></li><li><a class="dropdown-item" href="./add-birthdate.html">Note a Birthdate</a></li>
+            <li><a class="dropdown-item disabled" href="./">Bday Wishes</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="./invite.html">Invite to join the list</a></li>
+            <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="./profile.html">My profile page</a></li>
-            <li><a class="dropdown-item disabled" href="./">Wishes</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="./invite.html">Invite a person in</a></li>
-            <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item signout-button" href="#">Sign out</a></li>
           </ul>
       </div>
@@ -47,28 +47,25 @@
 
     <div class="container-fluid">
 
-      <div class="row justify-content-center">
-  
-        <div class="col-12 text-center" id="">
-  
-            <h3>Invite on your family:</h3>
-  
-          </div>
-          <div class="col-md-6 text-center">
+      <div class="row container-box justify-content-center">
+
+          <div class="col">
+
+            <h3>Share your list with another person</h3>
   
             <form onsubmit="return false;">
               <div class="mb-3">
                 <label for="email-input" class="form-label">Email</label>
                 <input type="text" class="form-control" id="email-input" aria-describedby="emailHelp">
-                <div id="emailHelp" class="form-text">Email to send invitation to</div>
+                <div id="emailHelp" class="form-text">Email of the new person you want to invite</div>
               </div>
-              <button type="submit" class="btn btn-primary" id="invite-button">Invite</button>
+              <button type="submit" class="btn btn-primary" id="invite-button">Invite now to join your list</button>
             </form>
 
-            <p class="text-small mt-3 mb-1">Results:</p>
+            <!-- <p class="text-small mt-3 mb-1">Results:</p>
             <ul id="results" class="list-group">
 
-            </ul>
+            </ul> -->
   
           </div>
   

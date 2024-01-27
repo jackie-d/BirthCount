@@ -31,9 +31,14 @@ const module = {
         
         const db = getFirestore(this.firebase);
 
-        await addDoc(collection(db, "families", this.user.uid, "birthdates"), {
+        addDoc(collection(db, "families", this.user.uid, "birthdates"), {
             name: $name.val(),
             date: $date.val()
+        }).then(() => {
+            location.href = './';
+        }).error(err => {
+            console.log(err);
+            alert('We are sorry but there has been an error about the insertion.');
         });
 
         $name.val('');

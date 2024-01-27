@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class=" w-100 h-100">
 <head>
   <meta charset="utf-8">
   <title>BirthCount.com</title>
@@ -12,16 +12,16 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" />
 <link href="css/style.css" rel="stylesheet" />
 </head>
-<body id="home" class="text-center text-white bg-dark">
+<body id="home" class="text-center w-100 h-100">
 
 
-  <nav class="navbar navbar-expand-md mb-4">
+  <nav class="navbar navbar-expand-md mb-2" >
     <div class="container-fluid">
       <a class="navbar-brand" href="./">BirthCount.com</a>
 
       <div class="col-md-3 text-end" id="topbar-signup" style="display: none">
         <a type="button" class="btn btn-outline-primary me-2" href="./login.html">Login</a>
-        <a type="button" class="btn btn-primary" href="./signup.html">Sign-up</a>
+        <a type="button" class="btn btn-secondary" href="./signup.html">Sign-up</a>
       </div>
 
       <div class="dropdown text-end" id="topbar-user" style="display: none">
@@ -30,12 +30,12 @@
             <!-- https://eu.ui-avatars.com/api/?name=John+Doe&size=25 -->
           </a>
           <ul class="dropdown-menu text-small dropdown-menu-end" aria-labelledby="dropdownUser1" style="">
-            <li><a class="dropdown-item" href="./">Dashboard</a></li>
+            <li><a class="dropdown-item" href="./">List of Birthdays</a></li><li><a class="dropdown-item" href="./add-birthdate.html">Note a Birthdate</a></li>
+            <li><a class="dropdown-item disabled" href="./">Bday Wishes</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="./invite.html">Invite to join the list</a></li>
+            <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="./profile.html">My profile page</a></li>
-            <li><a class="dropdown-item disabled" href="./">Wishes</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="./invite.html">Invite a person in</a></li>
-            <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item signout-button" href="#">Sign out</a></li>
           </ul>
       </div>
@@ -43,15 +43,15 @@
     </div>
   </nav>
 
-  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column" style="align-items: center; display: flex !important; flex-direction: column; justify-content: center;">
 
   <main class="px-3">
-    <h1>Remember birthdays on your family</h1>
-    <p class="lead">Note the birthdays of your family members and invite them to do it together</p>
+    <h1>Note all the Birthdays those matter to you!</h1>
+    <p class="lead">Create your private list of Birthdates and you can also share it with other people you like to</p>
     <p class="lead">
-      <a href="./signup.html" style="color: #333" class="btn btn-lg btn-secondary fw-bold border-white bg-white"></a>
+      <a href="./signup.html" class="btn btn-lg btn-secondary">Start now the Birthdays list</a>
       <br />
-      <a href="./search.html" style="color: #fff" class="btn btn-lg btn-outline-primary fw-bold mt-4 border-white">Search a family member account</a>
+      <!-- <a href="./search.html" style="color: #fff" class="btn btn-lg btn-outline-primary fw-bold mt-4 border-white">Search a family member account</a> -->
     </p>
   </main>
 
